@@ -101,7 +101,7 @@ Here are some examples (these don't correspond to actual gems):
 
 | Gem Name | Field Name |
 |----------------------------|------------------------------|
-| `administrate-field-image` | `Administrate::Field::Image` |
+| `administrate-field-enum` | `Administrate::Field::Enum` |
 | `administrate-field-file_upload` | `Administrate::Field::FileUpload` |
 | `administrate-field-geocoding-region` | `Administrate::Field::Geocoding::Region` |
 | `administrate-field-geocoding-geo_json` | `Administrate::Field::Geocoding::GeoJson` |

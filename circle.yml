@@ -1,6 +1,6 @@
 dependencies:
   post:
     - bundle exec appraisal install
-test:
+test: 
   override:
     - bundle exec appraisal rspec
