@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/guillaumemaka/administrate-field-enum.svg?style=svg)](https://circleci.com/gh/guillaumemaka/administrate-field-enum)
+
 # Administrate::Field::Enum
 
 A plugin to show enum in [Administrate].
