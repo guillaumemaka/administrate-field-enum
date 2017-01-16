@@ -18,5 +18,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency "appraisal", "~> 2.1"
   gem.add_dependency "rails", ">= 4.2"
 
+  gem.add_development_dependency "rspec_junit_formatter", "0.2.2"
   gem.add_development_dependency "rspec", "~> 3.4"
 end
