@@ -32,12 +32,12 @@ By default the plugin render radio buttons if the enum contains less than 4 enum
 By default the plugin retrieve all the enum values by calling the mapping class method pluralize  attribute on your model object:
 
 ```
-class Post < ActiveRecor::Base
+class Post < ActiveRecord::Base
   enum status: { submitted: 1, approved: 2, published: 3 }
 end
 ```
 
-In this exemple if we declared an attribute like this:
+In this example if we declare an attribute like this:
 
 ```
 class PostDashboard
@@ -49,24 +49,24 @@ end
 
 the plugin will call ```Post.statuses```, that will return a Hash. The Hash keys will be use as the text label (titleized) and as input value.
 
-So if any circonstances you need to return a custom collection (usually you don't) you can pass the ```:collection_method``` option to the field this method will be called instead.
+So if for any circumstances you need to return a custom collection (usually you don't) you can provide a ```:collection_method``` option to the field, this method will be called on your model instead.
 
-Your custom method collection method should return :
+Your custom collection method should return :
 
 - A string/integer key/value Hash object
 ```
 { submitted: 1, approved: 2, published: 3 }
 ```
-- An Array where each element is an Array with the first element correspond to the text label and the second to the value
+- An Array where each element is an Array with the first element correspond to the text label and the second the corresponding value
 ```
 [
     ['Submitted', 1],
-    ['Approved', 1],
-    ['Rejected', 1]
+    ['Approved', 2],
+    ['Rejected', 3]
 ]
 ```
 
-- An Array of Hash :
+- An Array of Hash object :
 ```
 [
     { label: "Submitted", value: 1 },
@@ -74,7 +74,7 @@ Your custom method collection method should return :
     { label: "Rejected", value: 3 },
 ]
 ```
-In that case you must pass ```label_key``` and ```value_key``` options to the options field :
+In the last case you must provide a ```label_key``` and ```value_key``` options to the options field :
 ```
 class PostDashboard
   ATTRIBUTE_TYPES = {
