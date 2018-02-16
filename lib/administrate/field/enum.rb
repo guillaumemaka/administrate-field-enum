@@ -34,8 +34,9 @@ module Administrate
       end
 
       def collection
-        resource = Object.const_get(resource_name)
-        @collection ||= resource.respond_to?(collection_method) ? resource.send(collection_method) : []
+        return options[:collection] if options.has_key?(:collection)
+
+        @collection ||= @resource.respond_to?(collection_method) ? @resource.send(collection_method) : []
       end
 
       def collection_method
